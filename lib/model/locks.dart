@@ -1,4 +1,4 @@
-import 'package:bbtu/model/contacts.dart';
+import 'contacts.dart';
 
 class LockDetails {
   late String lockld;

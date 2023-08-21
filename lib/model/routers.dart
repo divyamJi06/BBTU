@@ -1,4 +1,4 @@
-import 'package:bbtu/model/contacts.dart';
+import 'contacts.dart';
 
 class RouterDetails {
   late String lockID;

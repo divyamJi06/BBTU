@@ -1,5 +1,5 @@
-import 'package:bbtu/controller/storage_controller.dart';
-import 'package:bbtu/widgets/toast.dart';
+import '../controller/storage_controller.dart';
+import '../widgets/toast.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

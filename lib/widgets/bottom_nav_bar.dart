@@ -1,6 +1,6 @@
-import 'package:bbtu/controller/permission.dart';
-import 'package:bbtu/views/lock_page.dart';
-import 'package:bbtu/views/router_page.dart';
+import '../controller/permission.dart';
+import '../views/lock_page.dart';
+import '../views/router_page.dart';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 import '../utils/contstants.dart';

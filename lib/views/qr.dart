@@ -1,10 +1,10 @@
 import 'dart:convert';
 
-import 'package:bbtu/controller/storage_controller.dart';
-import 'package:bbtu/model/contacts.dart';
-import 'package:bbtu/model/routers.dart';
-import 'package:bbtu/utils/contstants.dart';
-import 'package:bbtu/widgets/custom_button.dart';
+import '../controller/storage_controller.dart';
+import '../model/contacts.dart';
+import '../model/routers.dart';
+import '../utils/contstants.dart';
+import '../widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';

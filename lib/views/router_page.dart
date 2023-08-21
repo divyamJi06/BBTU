@@ -1,4 +1,4 @@
-import 'package:bbtu/views/qr.dart';
+import 'qr.dart';
 import 'package:flutter/material.dart';
 import '../controller/storage_controller.dart';
 import '../model/routers.dart';
