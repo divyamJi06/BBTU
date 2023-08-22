@@ -1,5 +1,6 @@
-import 'widgets/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
+
+import 'widgets/auth.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MyNavigationBar(),
+      home: AuthPage(),
     );
   }
 }

@@ -1,17 +1,17 @@
-import '../controller/storage_controller.dart';
-import '../widgets/toast.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:scan/scan.dart';
 
+import '../controller/storage_controller.dart';
 import '../model/contacts.dart';
 import '../model/locks.dart';
 import '../model/routers.dart';
 import '../utils/contstants.dart';
 import '../widgets/bottom_nav_bar.dart';
+import '../widgets/custom_app_bar.dart';
 import '../widgets/custom_button.dart';
+import '../widgets/toast.dart';
 
 class GalleryQRPage extends StatefulWidget {
   const GalleryQRPage({required this.type, super.key});
@@ -112,7 +112,10 @@ class _GalleryQRPageState extends State<GalleryQRPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: PreferredSize(
+        child: CustomAppBar(heading: ""),
+        preferredSize: const Size.fromHeight(60),
+      ),
       body: Center(
         child: Column(children: [
           Text(qrcode),

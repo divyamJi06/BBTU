@@ -1,16 +1,14 @@
-import 'gallery_qr.dart';
-import 'qr.dart';
+import 'dart:async';
+
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
+
 import '../controller/storage_controller.dart';
 import '../model/locks.dart';
 import '../utils/contstants.dart';
 import '../widgets/lock_card.dart';
 import 'connect_to_lock.dart';
-import 'dart:async';
-
-import 'package:flutter/services.dart';
-import 'package:scan/scan.dart';
+import 'gallery_qr.dart';
+import 'qr.dart';
 
 class LockPage extends StatelessWidget {
   LockPage({super.key});
