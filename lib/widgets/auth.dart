@@ -1,13 +1,11 @@
-import 'custom_button.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:local_auth/local_auth.dart';
-import '../utils/contstants.dart';
 import 'package:local_auth_android/local_auth_android.dart';
 import 'package:local_auth_ios/local_auth_ios.dart';
 
+import '../utils/contstants.dart';
 import 'bottom_nav_bar.dart';
-import 'custom_app_bar.dart';
+import 'custom_button.dart';
 
 class AuthPage extends StatefulWidget {
   const AuthPage({super.key});

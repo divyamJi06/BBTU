@@ -1,11 +1,12 @@
-import 'qr.dart';
 import 'package:flutter/material.dart';
+
 import '../controller/storage_controller.dart';
 import '../model/routers.dart';
 import '../utils/contstants.dart';
 import '../widgets/router_card.dart';
 import 'connect_to_lock.dart';
 import 'gallery_qr.dart';
+import 'qr.dart';
 
 class RouterPage extends StatelessWidget {
   RouterPage({super.key});

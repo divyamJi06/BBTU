@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:bbtu/widgets/toast.dart';
+import '../widgets/toast.dart';
 import 'package:flutter/material.dart';
 
 import '../controller/storage_controller.dart';
