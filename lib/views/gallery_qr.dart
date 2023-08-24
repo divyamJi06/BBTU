@@ -72,8 +72,11 @@ class _GalleryQRPageState extends State<GalleryQRPage> {
       print("----------------");
       if (widget.type == "lock") {
         if (d.length != 8) throw Exception("Not correct data");
-        ContactsModel contacts =
-            ContactsModel(accessType: d[5], date: d[6], time: d[7], name: d[4]);
+        ContactsModel contacts = ContactsModel(
+            accessType: d[5],
+            startDateTime: DateTime.tryParse(d[6])!,
+            endDateTime: DateTime.tryParse(d[7])!,
+            name: d[4]);
         details = LockDetails(
             contactsModel: contacts,
             iPAddress: routerIP,
@@ -86,8 +89,11 @@ class _GalleryQRPageState extends State<GalleryQRPage> {
       } else if (widget.type == "router") {
         if (d.length != 9) throw Exception("Not correct data");
 
-        ContactsModel contacts =
-            ContactsModel(accessType: d[6], date: d[7], time: d[8], name: d[5]);
+        ContactsModel contacts = ContactsModel(
+            accessType: d[6],
+            startDateTime: DateTime.tryParse(d[7])!,
+            endDateTime: DateTime.tryParse(d[8])!,
+            name: d[5]);
         routerDetails = RouterDetails(
           lockID: d[0],
           name: d[1],

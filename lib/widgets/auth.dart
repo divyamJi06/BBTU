@@ -72,7 +72,19 @@ class _AuthPageState extends State<AuthPage> {
             SizedBox(
               height: 20,
             ),
-            CustomButton(text: "Retry", onPressed: authenticatee)
+            CustomButton(text: "Retry", onPressed: authenticatee),
+            CustomButton(
+                text: "Continue Without Password",
+                onPressed: () {
+                  Navigator.pushAndRemoveUntil<dynamic>(
+                    context,
+                    MaterialPageRoute<dynamic>(
+                      builder: (BuildContext context) => MyNavigationBar(),
+                    ),
+                    (route) =>
+                        false, //if you want to disable back feature set to false
+                  );
+                })
           ],
         ),
       ),

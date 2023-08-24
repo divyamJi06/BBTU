@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:bbtu/widgets/toast.dart';
 import 'package:flutter/material.dart';
 
 import '../controller/storage_controller.dart';
@@ -97,6 +98,26 @@ class LockPage extends StatelessWidget {
                         itemBuilder: (context, index) {
                           return GestureDetector(
                             onTap: () {
+                              if (snapshot.data![index].contactsModel.accessType
+                                  .toString()
+                                  .contains("Timed Access")) {
+                                DateTime now = DateTime.now();
+                                DateTime startDate = snapshot
+                                    .data![index].contactsModel.startDateTime;
+                                DateTime endDate = snapshot
+                                    .data![index].contactsModel.endDateTime;
+                                print(startDate);
+                                print(endDate);
+                                if (snapshot
+                                    .data![index].contactsModel.accessType
+                                    .contains("Timed")) {
+                                  if (now.isAfter(endDate)) {
+                                    showToast(context,
+                                        "You have surpassed the end date. Contact the admin for fresh installation");
+                                    return;
+                                  }
+                                }
+                              }
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
