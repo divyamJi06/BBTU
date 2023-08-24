@@ -1,3 +1,4 @@
+import 'package:bbtu/views/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'widgets/auth.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: AuthPage(),
+      home: MyHomePage(),
     );
   }
 }

@@ -59,8 +59,29 @@ class _AuthPageState extends State<AuthPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        child: CustomAppBar(heading: "Authentication"),
-        preferredSize: const Size.fromHeight(60),
+        preferredSize: Size.fromHeight(60),
+        child: AppBar(
+          iconTheme: IconThemeData(color: appBarColour),
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back,
+              size: 30,
+            ),
+          ),
+          backgroundColor: backGroundColour,
+          // automaticallyImplyLeading: false,
+          title: Text(
+            "Authentication",
+            style: TextStyle(
+                color: appBarColour, fontSize: 40, fontWeight: FontWeight.bold),
+          ),
+          actions: const [],
+          centerTitle: true,
+          elevation: 0,
+        ),
       ),
       body: Center(
         child: Column(
