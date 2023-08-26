@@ -7,6 +7,7 @@ import '../widgets/router_card.dart';
 import 'connect_to_lock.dart';
 import 'gallery_qr.dart';
 import 'qr.dart';
+import '../widgets/toast.dart';
 
 class RouterPage extends StatelessWidget {
   RouterPage({super.key});
@@ -44,7 +45,8 @@ class RouterPage extends StatelessWidget {
                 IconButton(
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const GalleryQRPage(type: "router"),
+                        builder: (context) =>
+                            const GalleryQRPage(type: "router"),
                       ));
                     },
                     icon: Icon(Icons.photo)),
@@ -97,6 +99,26 @@ class RouterPage extends StatelessWidget {
                         itemBuilder: (context, index) {
                           return GestureDetector(
                             onTap: () {
+                              if (snapshot.data![index].contactsModel.accessType
+                                  .toString()
+                                  .contains("Timed Access")) {
+                                DateTime now = DateTime.now();
+                                DateTime startDate = snapshot
+                                    .data![index].contactsModel.startDateTime;
+                                DateTime endDate = snapshot
+                                    .data![index].contactsModel.endDateTime;
+                                print(startDate);
+                                print(endDate);
+                                if (snapshot
+                                    .data![index].contactsModel.accessType
+                                    .contains("Timed")) {
+                                  if (now.isAfter(endDate)) {
+                                    showToast(context,
+                                        "You have surpassed the end date. Contact the admin for fresh approval");
+                                    return;
+                                  }
+                                }
+                              }
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(

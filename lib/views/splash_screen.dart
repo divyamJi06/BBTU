@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../utils/contstants.dart';
 import '../widgets/auth.dart';
+import '../widgets/bottom_nav_bar.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -15,9 +16,9 @@ class SplashScreenState extends State<MyHomePage> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 3),
+        Duration(seconds: 2),
         () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const AuthPage())));
+            MaterialPageRoute(builder: (context) => MyNavigationBar())));
   }
 
   @override

@@ -113,7 +113,7 @@ class LockPage extends StatelessWidget {
                                     .contains("Timed")) {
                                   if (now.isAfter(endDate)) {
                                     showToast(context,
-                                        "You have surpassed the end date. Contact the admin for fresh installation");
+                                        "You have surpassed the end date. Contact the admin for fresh approval");
                                     return;
                                   }
                                 }
